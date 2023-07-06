@@ -1,37 +1,535 @@
----
-layout: default
-title: Home
----
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Martijn de Vries - Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Martijn de Vries</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/images/martijn_profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work experience">Work Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards & Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Dan
+                        <span class="text-primary">Rossetti</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Greater Boston ·
+                        <a href="mailto:drossetti12@gmail.com">drossetti12@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">I'm a data scientist who enjoys building machine learning models that serve as impactful business tools. As a former mechanical engineer, I bring a rigorous approach to problem-solving, a strong mathematical intuition, and the ability to bridge theoretical concepts with real-world applications. Using these skills, I plan to develop practical solutions that positively impact our world. </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/dan-rossetti/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/drossDS"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="mailto:drossetti12@gmail.com" title="Email Me"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Python
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            SQL
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Jupyter Notebook
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Git
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Markdown
+                        </li>
+                        <br>
+                    </ul>
+                    <div class="subheading mb-3">Libraries</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Numpy
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Pandas
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Matplotlib
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Seaborn
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Scikit-Learn (Sklearn)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            TensorFlow
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Beautiful Soup
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Natural Language Toolkit (NLTK)
+                        </li>
+                        <br>
+                    </ul>
+                    <div class="subheading mb-3">Machine Learning</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Classification
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Clustering
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Linear Regression
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Neural Networks
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Natural Language Processing (NLP)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Web Scraping
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Boston Airbnb Fair Pricing Tool and Recommender</h3>
+                            <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/best_model_outliers_removed.png" width="350/">
+                            <p>Developed a pricing regression model to estimate Boston Airbnb listing prices. Used web scraping, APIs, and natural language processing (NLP) techniques to engineer features. Implemented a recommender system using cosine similarity to suggest listings based on user inputs. The pricing model outperformed the null model by reducing the root mean squared error from $86 to $49 and achieved an R-Squared value of 0.68 on validation data with outliers removed.</p>
+                            <a href="https://github.com/drossDS/Air_BnB_Fair_Pricing_Improved">Click here to see the code!</a>
+                            <br><br>
+                            <!-- Source:  https://dev.to/jordanfinners/creating-a-collapsible-section-with-nothing-but-html-4ip9-->
+                            <details>
+                                <summary>
+                                    <b><u>...Or click here to expand a summary!</u></b>
+                                </summary>
+                                <br>
+                                <div class="subheading mb-3">Key Accomplishments</div>
+                                <ul>
+                                    <li>
+                                        Data were collected from Inside Airbnb for over 3800 Airbnb listings in the Boston Area in 2023 with 75 features provided for each listing.
+                                    </li>
+                                    <li>
+                                        A feature to simulate the distance of each listing to Boston subway stations was created by <b>web scraping</b> station addresses from the Massachusetts Bay Transit Authority (MBTA) website before using the <b>Google Geocoding API</b> to return latitude and longitude coordinates for each listing.
+                                    </li>
+                                    <li>
+                                        Additional features were engineered which used <b>Natural Language Processing (NLP)</b> Techniques to examine descriptive text columns.
+                                    </li>
+                                    <li>
+                                        The correlation coefficients between all features and listing price were used to select the best features on which to train the model.
+                                    </li>
+                                    <li>
+                                        Seven different regression models were run, and the best models were optimized using grid searching.  <b>Principal Component Analysis (PCA)</b> was also attempted to reduce dimensionality and improve price predictions.
+                                    </li>
+                                    <li>
+                                        A simple recommender employing <b>cosine similarity</b> was created to find listings most similar to simulated user-input listing criteria.
+                                    </li>
+                                </ul>
+                                <div class="subheading mb-3">Key Outcomes</div>
+                                <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/rec_output.png" width="400/">
+                                <ul>
+                                    <li>
+                                        Outliers had a large impact on the model performance with the best models initially achieving a root mean squared error (RMSE) of $389 and an R-Squared value of 0.09 on validation data.
+                                    </li>
+                                    <li>
+                                        Performance improved drastically by removing listings with prices below the 5th percentile and above the 95th percentile to an <b>RMSE of $49</b> and an <b>R-Squared value of 0.68.</b> This is an improvement over the null model’s RMSE of $86 with outliers removed.
+                                    </li>
+                                    <li>
+                                        The best-performing model was a <b>random forest regressor</b>.
+                                    </li>
+                                    <li>
+                                        A recommender was capable of correctly recommending listings that met the simulated user-input listing criteria.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Determining the Severity of Alzheimer's Disease from MRI Images</h3>
+                            <br>
+                            <p>Built image classification models employing both convolutional and pre-trained neural network models to classify the severity of Alzheimer’s disease in MRI images. The model achieved an accuracy of 71% across four severity classes and improved upon the null model accuracy of 50%.  A second binary classification model was developed to focus on detecting very early stages of dementia by training on only two severity classes.  The binary model achieved an accuracy of 81%, an improvement of 22% over the null model accuracy of 59%.</p>
+                            <img style="float: left; margin: 0px 0px 00px 20px;" src="assets/img/average_brain_scans_good.png" width="800/">
+                            <br><br><br><br><br><br><br><br><br><br><br><br>
+                            <a href="https://github.com/drossDS/Alzheimers_Brain_Scan_Classification">Click here to see the code!</a>
+                            <br><br>
+                            <details>
+                                <summary>
+                                    <b><u>...Or click here to expand a summary!</u></b>
+                                </summary>
+                                <br>
+                                <div class="subheading mb-3">Key Accomplishments</div>
+                                <ul>
+                                    <li>
+                                        Exploratory data analysis (EDA) was performed on 6400 images of MRI brain scans obtained from Kaggle.  The images were presorted into four unbalanced classes of dementia severity including “no dementia”, “very mild dementia”, “mild dementia”, and “moderate dementia”.
+                                    </li>
+                                    <li>
+                                        Manually built convolutional neural network (CNN) models were attempted prior to implementing pre-trained image classification models.
+                                    </li>
+                                    <li>
+                                        Binary classification models focusing on improving early detection were created by training some of the previous models exclusively on the "no dementia" and "very mild dementia" classes.
+                                    </li>
+                                </ul>
+                                <div class="subheading mb-3">Key Outcomes</div>
+                                <ul>
+                                    <li>
+                                        The best model trained on all four dementia classes was the Inception v3 pre-trained model achieving an overall accuracy of 71%, outperforming the null model accuracy of 50%.
+                                    </li>
+                                    <li>
+                                        The best early detection binary classification model trained was an optimized CNN model achieving an overall accuracy of 81%, outperforming the binary null model accuracy of 59%.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Identifying Humor with Language Models</h3>
+                            <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/word_counts_cvec_nsw.png" width="500/">
+                            <p>Created classification models employing natural language processing to categorize news article titles collected from the r/worldnews and r/TheOnion subreddits using the Pushshift API. Regular expressions were used to clean the data, removing errors and subreddit identifiers in the titles.  A variety of classification models were attempted and evaluated. The best-performing model was a stacking classifier with an accuracy of 86.0% on unseen data.</p>
+                            <a href="https://github.com/drossDS/Humor_Identification_with_NLP">Click here to see the code!</a>
+                            <br><br>
+                            <details>
+                                <summary>
+                                    <b><u>...Or click here to expand a summary!</u></b>
+                                </summary>
+                                <br>
+                                <div class="subheading mb-3">Key Accomplishments</div>
+                                <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/nlp_model_flow_chart_.jpg" width="400/">
+                                <ul>
+                                    <li>
+                                        The Pushshift API was used to collect approximately 6000 news article titles from both the r/worldnews and r/TheOnion subreddits.
+                                    </li>
+                                    <li>
+                                        Natural language processing (NLP) techniques such as tokenization, stop word removal, and sentiment analysis were employed as pre-modeling and exploratory data analysis (EDA) steps.
+                                    </li>
+                                    <li>
+                                        Of seven different classification models initially attempted, the three best models were selected for hyperparameter tuning (optimization) using grid searching.
+                                    </li>
+                                    <li>
+                                        The three best-optimized models were then incorporated into a stacking classifier ensemble model (using a logistic regression model as the final estimator) to produce the best results.
+                                    </li>
+                                </ul>
+                                <div class="subheading mb-3">Key Outcomes</div>
+                                <ul>
+                                    <li>
+                                        The final model achieved an accuracy of 86% on unseen data, 89% on testing data, and 99.99% on training data. This is an improvement over the null model accuracy of approximately 51%.
+                                    </li>
+                                    <li>
+                                        It was speculated that the different subject matter of the two subreddits was likely the reason for such a high accuracy and not due to the model’s ability to correctly identify humor.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Home Price Estimator for Ames, Iowa</h3>
+                            <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/resid_v_saleprice.png" width="500/">
+                            <p>Built a linear regression model to predict the price of homes in Ames, Iowa based on home and property characteristics. Engineered interaction and polynomial features to increase model accuracy. The best model achieved an R-Squared value of 0.89 and was able to predict home prices within a mean absolute error of $18,643 and a root mean squared error of $25,887 on testing data.</p>
+                            <a href="https://github.com/drossDS/Ames_Iowa_Home_Price_Estimator">Click here to see the code!</a>
+                            <br><br>
+                            <details>
+                                <summary>
+                                    <b><u>...Or click here to expand a summary!</u></b>
+                                </summary>
+                                <br>
+                                <div class="subheading mb-3">Key Accomplishments</div>
+                                <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/correlation_matrix.JPG" width="500/">
+                                <ul>
+                                    <li>
+                                        Features were selected based both on their correlations to the home price and common knowledge of important home characteristics that would influence the sale price or value.
+                                    </li>
+                                    <li>
+                                        Different sets of features were run through a linear regression model to find features that would produce the best model performance.
+                                    </li>
+                                    <li>
+                                        Interaction terms and polynomial feature transforms were created and included in the prediction model based on their correlations to price.
+                                    </li>
+                                    <li>
+                                        Regularization techniques were attempted to improve model performance.
+                                    </li>
+                                </ul>
+                                <div class="subheading mb-3">Key Outcomes</div>
+                                <ul>
+                                    <li>
+                                        The final model that was selected was trained on a dataset that included polynomial features with a mean absolute error of $18,643 - well within the $30,000 goal - and an improvement on the null model RMSE of $78,827.
+                                    </li>
+                                    <li>
+                                        Regularization methods produced a slight reduction in model performance with increases in the RMSE below or around 1% of the RMSE from the non-regularized model.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Carbon Emissions Forecasting</h3>
+                            <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/Provided_NNEIEUS_Data.png" width="450/">
+                            <p>Forecasted carbon emissions levels from natural gas electric energy production one year beyond the provided historical time series data. Optimized a variety of autoregression analysis models with hyperparameter tuning, selected the type of transformation for the training data, and chose the optimal time span of historical data to be used to train the model. The best model achieved an estimated mean absolute percent error of 3%.</p>
+                            <a href="https://github.com/drossDS/Forecasting_Carbon_Emissions">Click here to see the code!</a>
+                            <br><br>
+                            <details>
+                                <summary>
+                                    <b><u>...Or click here to expand a summary!</u></b>
+                                </summary>
+                                <br>
+                                <div class="subheading mb-3">Key Accomplishments</div>
+                                <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/Carbon_Emissions_Forecast.png" width="450/">
+                                <ul>
+                                    <li>
+                                        Monthly carbon emissions data were provided for natural gas emissions data between 1973 and 2016.
+                                    </li>
+                                    <li>
+                                        Different data transformation techniques were evaluated to optimize model performance and various training data time spans were examined to reduce prediction error and determine how much of the provided training data should be used to train the model.
+                                    </li>
+                                    <li>
+                                        AR, MA, ARMA, ARIMA, and SARIMA models were optimized and evaluated.
+                                    </li>
+                                </ul>
+                                <div class="subheading mb-3">Key Outcomes</div>
+                                <ul>
+                                    <li>
+                                        A SARIMA model was chosen as the best-performing model.
+                                    </li>
+                                    <li>
+                                        Carbon emissions levels were forecasted for 12 months beyond the provided data within an estimated mean absolute percent error (MAPE) of 3% based on the validation dataset.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+             <!-- Work Experience-->
+             <section class="resume-section" id="work experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Work Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" href="https://www.linkedin.com/in/dan-rossetti/">Data Scientist</h3>
+                            <div class="subheading mb-3">The Opportunity Project (TOP) - Volunteer Program</div>
+                            <ul>
+                                <li>
+                                    Developing a framework for data encoding and medical reporting system integration in a cross-functional team of UX designers, software engineers, and other data scientists tasked with creating an application to report at-home covid test results. TOP is administered by the U.S. Census Bureau and the FDA in 2023.
+                                    <a href="https://opportunity.census.gov/sprints/fda-diagnostic/">Click here to learn more about TOP!</a>
+                                </li>                              
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">May 2023 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" href="https://www.linkedin.com/in/dan-rossetti/">Mechanical Engineer</h3>
+                            <div class="subheading mb-3">Draper Laboratory</div>
+                            <ul>
+                                <li>
+                                    Led the mechanical design of a working multi-chambered dialysis cartridge prototype capable of performing multipoint dilution hemofiltration using hollow fiber dialysis membranes. The resulting cartridge achieved a filtration fraction of 68%, directly in line with calculated estimates, and approximately 3 times higher than conventional units.
+                                </li>
+                                <li>
+                                    Spearheaded product engineering activities for electromechanical components in a guidance system for over 3 years. Interrogated and selected prospective vendors. Mediated competing component and system requirements against vendor and technology limitations by consulting subject matter experts. Managed the direction of vendor engineering activities and Draper-vendor relationships. Created technology development roadmaps and gave regular presentations to program management and customers.
+                                </li>
+                                <li>
+                                    Designed and built application-specific enclosure assemblies for sensitive electronics with EMI considerations and thermal requirements. Guided PCB layout/design for heat dissipation and electrical/optical/assembly interfaces. Collaborated with the electronics lab during assembly.
+                                </li>
+                                <li>
+                                    Prototyped and tested a water-cooling system employing heat exchangers, thermoelectric modules, flow/pressure gauges, and temperature sensors. Developed a Simscape (Simulink) model to predict performance. Created analytical models for thermoelectric coolers, system power consumption, and pressure drops to advise trade studies and component specifications for a deliverable unit.
+                                </li>
+                                <li>
+                                    Co-coordinated and managed the Draper Hardware Directorate 2019 Summer Intern Program, where 14 students competing in two teams were tasked to build self-navigating hovercraft vehicles capable of acquiring and impacting a stationary target. Developed the project technical concept and competition rules to teach real-world technical and administrative engineering skills. Performed student exit interviews to collect program feedback and participated in intern reviews to identify top performers as candidates for future employment opportunities and hiring decisions. Provided mentoring and administrative/technical guidance, and connected students with internal technical experts/mentors.
+                                    <a href="https://www.draper.com/news-releases/students-self-guided-hovercrafts-compete-win-drapers-summer-internship-program">Link to Draper Summer Intern Program News Release</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2016 - March 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Design Engineer</h3>
+                            <div class="subheading mb-3">GE Oil & Gas</div>
+                            <ul>
+                                <li>
+                                    Wrote a Design Practice for Masoneilan control valve bolted-bonnet joints. Standardized design procedures by interfacing with global engineering groups. Optimized design methodology and implemented standard FEA guidelines by consulting internal experts and researching academic resources.
+                                </li>
+                                <li>
+                                    Worked in a team to produce standard valve designs along with manufacturing and field service documentation for a steam-service product line. Collaborated with designers/drafters to produce and review detailed manufacturing drawings on schedule and with a quality focus.
+                                </li>
+                                <li>
+                                    Fulfilled customer orders by modifying standard products to meet special customer applications. Delivered solutions for high-temperature applications (above 1000F) where components are highly susceptible to "creep" and stress relaxation. Collaborated extensively with Principal, Consulting, and Chief Consulting Engineers to verify design methodology and ensure safety.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 2012 - January 2016</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Mechanical Engineer</h3>
+                            <div class="subheading mb-3">Teradyne INC.</div>
+                            <p></p>
+                            <ul>
+                                <li>
+                                    Performed vibration testing in laboratory and customer factory environments for hard drive test systems. Collected data using impact hammers, microphones, accelerometers, and internally developed transducers.
+                                </li>
+                                <li>
+                                    Analyzed power spectral density (PSD) data, acoustic data, time-domain shock data, and waterfall FFT plots. Presented results to aid in troubleshooting, high-level design decisions, and the characterization/validation of components and new product features.
+                                </li>
+                                <li>
+                                    Supported system installations by performing testing at customer factories to resolve issues and facilitate system release. Reported and presented updates to project management via conference calls. Developed a guide to help on-site teams collect measurements and ensure proper system installation.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 2010 - March 2012</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">General Assembly Data Science Immersive</h3>
+                            <div class="subheading mb-3">12-Week Online Program</div>
+                            <br>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary"> March 2023 - June 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">MIT APPLIED DATA SCIENCE PROGRAM</h3>
+                            <div class="subheading mb-3">Online Program</div>
+                            <br>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary"> May 2021 - August 2021</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Massachusetts Lowell</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Mechanical Engineering</div>
+                            <p>GPA: 3.9/4.0</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2006 - May 2010</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Publications</h2>
+                    <div class="subheading mb-3">Awards</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Dean's Gold Medal Award for Highest GPA in Mechanical Engineering - Co-recipient
+                        </li>
+                        <br><br>
+                    </ul>
+                    <div class="subheading mb-3">Publications</div>
+                    <p>Mott, V.L., Finley, V., Truslow, J., Rossetti, D., et al. (2020). Multipoint dilution hemofiltration: A new technology for maximum convective clearance. Artificial Organs, 44 (7), 753-763.</p>
+                    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/aor.13640">Link to publication</a>    
+                </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <br>
+                    <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/img/food.jpg" width="250/">
+                    <p>Despite working in STEM fields for my entire career, my hobbies are largely artistic.  Cooking and food have been the one consistent passion throughout my life and I’m always looking to improve and try new things.</p>
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <img style="float: left; margin: 0px 20px 0px 0px;" src="assets/img/eagle.jpg" width="250/">
+                    <p>A more sporadic hobby is woodcarving, but it requires an ability to focus, strong attention to detail, a good feel for hand tools, and the ability to translate ideas into three-dimensional forms.</p>
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <img style="float: right; margin: 0px 00px 0px 20px;" src="assets/img/rock_climbing.jpg" width="250/">
+                    <p>Indoor rock climbing has been another fun, off-and-on hobby that I enjoy which draws on my problem-solving abilities while also being an entertaining way to keep moving.</p>
+                    <p>Other hobbies include playing the guitar and electronic music production.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
