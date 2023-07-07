@@ -292,9 +292,11 @@
                             <h3 class="mb-0">Solar Intensity Forecasting</h3> <br>
                             <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/GHI_RNN_m1.png" width="600/">
 
-                            <p> As renewable energy sources start to make up an increasingly large share of electricity production in the United States, 
-                            the challenge of how to integrate these (often variable and irregular) sources into the grid is becoming more and more relevant. In a small team, we constructed
-                            a model that can forecast the Solar intensity a few days ahead in Los Angeles, so that the energy grid can be optimally managed. </p>
+                            <p> 
+                                As renewable energy sources start to make up an increasingly large share of electricity production in the United States, 
+                                the challenge of how to integrate these (often variable and irregular) sources into the grid is becoming more and more relevant. In a small team, we constructed
+                                a model that can forecast the Solar intensity a few days ahead in Los Angeles, so that the energy grid can be optimally managed. 
+                            </p>
                             <br>
                             <a href="https://github.com/martijndevries/solar-intensity-forecast">Github Repo</a> <br> <br>
                             <p><span id="more-text-1"> 
@@ -314,9 +316,41 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">NLP Analysis and Classification of Reddit posts </h3> <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/NLP_NB_bigrams.png" width="500/">
+                            <p> 
+                                For this project, I wanted to investigate the way that political polarization in the United States is reflected in language use. In order to gauge this,
+                                I built a classification model that can classify posts and comments from two politically-themed subreddits: r/politics and r/conservative. Posts and 
+                                comments are classified based on the language, as well as some secondary identifying features.  <br> <br>
 
+                                By studying feature importances of the various models, we can gain interesting insights into the difference in language use in these two subreddits.
+                                An example is shown in the in the image to the right, which shows the most predictive bigrams in the Naive Bayes classifier. If one of these bigrams occurs 
+                                in a post title, the model is much more likely to classify the posts as belonging to r/politics (blue) or r/conservative (red).
+                            </p> <br> 
+                            <a href="https://github.com/martijndevries/NLP_Reddit">Github Repo</a> <br> <br>
+                            <p><span id="more-text-2"> 
+                                <b> Project Overview and Outcomes: </b> <br> <br>
+
+                                I collected data from October 2022, the month leading up to the midterms, from both subreddits using the Pushshift API. 
+                                After cleaning and EDA, I built separate models for both posts and comments. I used a TF-IDF vectorizer to vectorize the language,
+                                as well as a custom scikit-learn transformer to customize the number of bigrams (sets of two words) that are retained in the model. <br> <br>
+                                
+                                The best-working model is a stacked model consisting of logistic regression, random forest, and Naive Bayes. The model is able to classify
+                                88.6% of posts correctly, and 65.4% of comments. The main difference in performance is simply due to the fact that comments are typically shorter,
+                                which makes it harder to categorize them.
+                            </span> </p>
+                            <button id="read-more-2">Read More</button>
+                            <button id="read-less-2" style="display: none;">Read Less</button>
                         </div>
                     </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0"> Predicting Housing Prices in Ames, Iowa </h3> <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/Ames_prices.png" width="500/">
+                            <p>
+                                I used the famous Ames, Iowa housing dataset to build a linear regression model 
+                            </p> <br>
+                            <a href="https://github.com/martijndevries/AmesHousingPrices">Github Repo</a> <br> <br>
+
 
 
 
