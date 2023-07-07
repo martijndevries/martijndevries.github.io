@@ -347,12 +347,26 @@
                             <h3 class="mb-0"> Predicting Housing Prices in Ames, Iowa </h3> <br>
                             <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/Ames_prices.png" width="500/">
                             <p>
-                                I used the famous Ames, Iowa housing dataset to build a linear regression model 
+                                I used the famous Ames, Iowa housing dataset to build a predictive house prices model using linear regression techniques.
+                                In order to find the most predictive features, I performed extensive EDA and built several models of increasing complexity. 
+                                The plot on the right shows the predicted vs actual sale price for the best performing model.
                             </p> <br>
                             <a href="https://github.com/martijndevries/AmesHousingPrices">Github Repo</a> <br> <br>
+                            <p><span id="more-text-3"> 
+                                <b> Project Overview and Outcomes: </b> <br> <br>
 
+                                Because this dataset has a relatively large number of features (81), extensive EDA and feature engineering was necessary to find the
+                                best model. The best-performing model includes a total of 22 features, of which 11 are categorical (and therefore have to be one-hot encoded).
+                                Additionally, I found that log-transforming the sale price improves the performance of the model, as the relationship between the predictor variables
+                                and the sale price are not strictly linear. <br><br>
 
+                                The root mean squared error of the model on the testing data is about $22100. Adding regularization (Ridge Regression) increased model performance
+                                by a negligible amount, indicating that the model might still be somewhat underfit.
 
+                            </span> </p>
+                            <button id="read-more-3">Read More</button>
+                            <button id="read-less-3" style="display: none;">Read Less</button>
+                        </div>
 
                 </div>
             </section>
