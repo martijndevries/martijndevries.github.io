@@ -3190,6 +3190,22 @@ textarea.form-control-lg {
   }
 }
 
+#more-text {
+  display: none;
+}
+
+#more-text-1 {
+  display: none;
+}
+
+#more-text-2 {
+  display: none;
+}
+
+#more-text-3 {
+  display: none;
+}
+
 .dropup,
 .dropend,
 .dropdown,

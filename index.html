@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Martijn de Vries</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/images/martijn_profile.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/images/martijn_profile.png" alt="..." /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -74,49 +74,6 @@
                         <ul class="fa-ul mb-0">
                             <li>
                                 <span class="fa-li"><i class="fas fa-check"></i></span>
-                                Python
-                                <ul class="fa-ul mb-0">
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Numpy
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Scipy
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Pandas
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Scikit-learn
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Tensorflow
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Pytorch
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Matplotlib
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-circle"></i></span>
-                                        Seaborn
-                                    </li>
-                                </ul>
-
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-check"></i></span>
-                                SQL
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-check"></i></span>
                                 Bash
                             </li>
                             <li>
@@ -125,7 +82,72 @@
                             </li>
                             <li>
                                 <span class="fa-li"><i class="fas fa-check"></i></span>
+                                HTML
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Jupyter
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Markdown
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Python
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
                                 R
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                SQL
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="col">
+                        <div class="subheading mb-3">Python Libraries</div>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Matplotlib
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Numpy
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                OpenCV
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Pandas
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Plotly
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Pytorch
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Scikit-learn
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Scipy
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Seaborn
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                Tensorflow
                             </li>
                         </ul>
                         </div>
@@ -246,14 +268,58 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Rendering Handwritten Equations</h3> <br>
-                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/perfect_prediction.png" width="450/">
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/perfect_prediction.png" width="400/">
                             <p>As a student at university, I regularly wished I could easily take a picture of my notes and equations and have them show up digitally! 
                                 With this in mind, I built a tool that can recognize individual symbols in an equation, and render the equation in LaTeX format.
                           </p> <br>
-                          <a href="https://github.com/martijndevries/HandwrittenEquationRendering">Link to the Github Repository</a>
+                          <a href="https://github.com/martijndevries/HandwrittenEquationRendering">Github Repo</a> <br> <br>
+                          <p><span id="more-text"> 
+                            <b> Project Overview and Outcomes: </b> <br> <br>
+
+                            The tool uses OpenCVs findcontour function to detect symbols in the image. 
+                            I then built a custom pre-processing pipeline that infers which contours belong together to form symbols, and what the order of the symbols should be.
+                            The symbols are then fed to retrained EfficientNetB0 Convolutional Neural Network, and a prediction for each symbol is made. Finally, the predictions for each symbol
+                            are stiched into an equation in LaTeX math mode format in the postprocessing pipeline, using the information from the previous steps. <br> <br>
+
+                            At present, the tool predicts at least 50% of the equation correctly 70% of the time, and makes a perfect prediction about 16% of the time. A more robust version of the tool is currently in development
+                            </span></p>
+                            <button id="read-more">Read More</button>
+                            <button id="read-less" style="display: none;">Read Less</button>
+                        </div>
+                    </div>       
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Solar Intensity Forecasting</h3> <br>
+                            <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/GHI_RNN_m1.png" width="600/">
+
+                            <p> As renewable energy sources start to make up an increasingly large share of electricity production in the United States, 
+                            the challenge of how to integrate these (often variable and irregular) sources into the grid is becoming more and more relevant. In a small team, we constructed
+                            a model that can forecast the Solar intensity a few days ahead in Los Angeles, so that the energy grid can be optimally managed. </p>
+                            <br>
+                            <a href="https://github.com/martijndevries/solar-intensity-forecast">Github Repo</a> <br> <br>
+                            <p><span id="more-text-1"> 
+                                <b> Project Overview and Outcomes: </b> <br> <br>
+
+                                In order to train and test our model, we used freely available weather data from the National Solar Radiation Database, which collects weather information
+                                at kilometer-resolution throughout the entire US using satellite data. We then used three different neural-net based approaches to forecast the 'Global Horizontal
+                                Irradiance', or GHI, several days in the future.  <br> <br>
+
+                                Although the Neural Prophet model performs the best, with the lowest scoring Root Mean Squared Error, it only works with univariate timeseries, and thus requires
+                                current GHI measurements to forecast GHI. In contrast, a Recurrent Neural Network can forecast the GHI using weather data, with an average error of 15% at solar noon.
+                            </span> </p>
+                            <button id="read-more-1">Read More</button>
+                            <button id="read-less-1" style="display: none;">Read Less</button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">NLP Analysis and Classification of Reddit posts </h3> <br>
 
                         </div>
-                    </div>        
+                    </div>
+
+
+
                 </div>
             </section>
             <hr class="m-0" />
@@ -305,6 +371,27 @@
                                 based on merit, cost, risk, urgency, and suitability for the observatory.
                             </li>
                         </ul>
+
+                        <div class="subheading mb-3"> Select Peer-Reviewed Publications </div>
+                        <ul>
+                            <li>
+                                <a href="https://academic.oup.com/mnras/article-abstract/518/2/2954/6825520">Chandra Measurements of Gas Homogeneity and Turbulence in the Perseus Cluster</a><br>
+                                Developed a custom statistical method to measure galaxy cluster turbulence, using Bayesian Inference and Markov Chain Monte Carlo Sampling.
+                                 Reduced error margins by 20%, and redefined benchmarks for simulations, theoretical work, and future observations.
+                            </li>
+                            <li>
+                                <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac5739">The Long Filament of PSR J2030+4415</a><br>
+                                Discovered new pulsar filament, mapping its full extent with fresh observations, feeding new data-driven insights into the origin and
+                                 physical nature of these filaments. Developed a new 'filament-finding' algorithm based on this discovery, which will be used to search for
+                                  filaments in upcoming observations.
+                            </li>
+                            <li>
+                                <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ac9794">A Quarter Century of Guitar Nebula/Filament Evolution</a><br>
+                                Spearheaded first long-term study of a pulsar filament, comparing 4 epochs of observations (data from 25+ years). 
+                                Developed generalizable and re-usable Python code to fit bow shock models to observational data.
+                            </li>
+                        </ul>
+
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">October 2019 - December 2022</span></div>
 
@@ -353,10 +440,10 @@
             <section class="resume-section" id="press">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Press Release</h2>
-                    In 2022, I led a study titled ‘The Long Filament of PSR J2030+4415’, which described the discovery of a new pulsar filament.
+                    In 2022, I led a study titled 'The Long Filament of PSR J2030+4415', which described the discovery of a new pulsar filament.
                     Pulsar filaments are beginning to garner wider scientific interest, as they could explain positron excess of cosmic rays detected here on Earth. 
                     The paper was highlighted in a NASA press release (<a href="https://chandra.harvard.edu/press/22_releases/press_031422.html">link here</a>), 
-                    and gained attention on popular science websites like <a href="https://www.space.com/pulsar-electron-positron-beam-antimatter">space.com</a> and <a href="https://astronomy.com">astronomy.com</a>. 
+                    and gained attention on popular science websites like <a href="https://www.space.com/pulsar-electron-positron-beam-antimatter">space.com</a> and <a href="https://www.astronomy.com/science/snapshot-pulsar-found-leaking-antimatter/">astronomy.com</a>. 
                     Below, you can find a YouTube video which explains more about the system.
                     
                     <br> <br>
