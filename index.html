@@ -319,12 +319,7 @@
                             <img style="float: right; margin: 0px 0px 0px 20px;" src="assets/images/NLP_NB_bigrams.png" width="500/">
                             <p> 
                                 For this project, I wanted to investigate the way that political polarization in the United States is reflected in language use. In order to gauge this,
-                                I built a classification model that can classify posts and comments from two politically-themed subreddits: r/politics and r/conservative. Posts and 
-                                comments are classified based on the language, as well as some secondary identifying features.  <br> <br>
-
-                                By studying feature importances of the various models, we can gain interesting insights into the difference in language use in these two subreddits.
-                                An example is shown in the in the image to the right, which shows the most predictive bigrams in the Naive Bayes classifier. If one of these bigrams occurs 
-                                in a post title, the model is much more likely to classify the posts as belonging to r/politics (blue) or r/conservative (red).
+                                I built a classification model that can classify posts and comments from two politically-themed subreddits: r/politics and r/conservative. <br> <br>
                             </p> <br> 
                             <a href="https://github.com/martijndevries/NLP_Reddit">Github Repo</a> <br> <br>
                             <p><span id="more-text-2"> 
@@ -332,11 +327,16 @@
 
                                 I collected data from October 2022, the month leading up to the midterms, from both subreddits using the Pushshift API. 
                                 After cleaning and EDA, I built separate models for both posts and comments. I used a TF-IDF vectorizer to vectorize the language,
-                                as well as a custom scikit-learn transformer to customize the number of bigrams (sets of two words) that are retained in the model. <br> <br>
+                                as well as a custom scikit-learn transformer to customize the number of bigrams (sets of two words) that are retained in the model.
+                                Posts and comments are classified based on the language, as well as some secondary identifying features.  <br> <br>
                                 
                                 The best-working model is a stacked model consisting of logistic regression, random forest, and Naive Bayes. The model is able to classify
                                 88.6% of posts correctly, and 65.4% of comments. The main difference in performance is simply due to the fact that comments are typically shorter,
                                 which makes it harder to categorize them.
+
+                                By studying feature importances of the various models, we can gain interesting insights into the difference in language use in these two subreddits.
+                                An example is shown in the in the image to the right, which shows the most predictive bigrams in the Naive Bayes classifier. If one of these bigrams occurs 
+                                in a post title, the model is much more likely to classify the posts as belonging to r/politics (blue) or r/conservative (red).
                             </span> </p>
                             <button id="read-more-2">Read More</button>
                             <button id="read-less-2" style="display: none;">Read Less</button>
@@ -367,6 +367,11 @@
                             <button id="read-more-3">Read More</button>
                             <button id="read-less-3" style="display: none;">Read Less</button>
                         </div>
+                    <!--<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0"> Modeling Stellar Bow Shocks </h3> <br>
+                            To be added-->
+
 
                 </div>
             </section>
